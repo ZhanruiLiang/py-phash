@@ -7,8 +7,12 @@ A perceptual hash is a fingerprint of a multimedia file derived from various fea
 
 Installation
 ------------
+Install pHash.
 
-python setup.py install
+Then in this folder:
+```
+    python setup.py install
+```
 
 (for python 3 checkout python3 branch)
 
@@ -30,7 +34,7 @@ Mexican hat wavelet
 Peak of Cross Correlation
 > `float pHash.compare_images( str file1, str file2 )`
 
-````python
+```python
 import pHash
 hash1 = pHash.imagehash( 'file.1.jpg' )
 hash2 = pHash.imagehash( 'file.2.jpg' )
@@ -38,8 +42,8 @@ print 'Hamming distance: %d (%08x / %08x)' % ( pHash.hamming_distance( hash1, ha
 
 digest1 = pHash.image_digest( 'file.1.jpg', 1.0, 1.0, 180 )
 digest2 = pHash.image_digest( 'file.2.jpg', 1.0, 1.0, 180 )
-print 'Cross-correelation: %d' % ( pHash.crosscorr( digest1, digest2 ) )
-````
+print 'Cross-correelation: %s' % ( pHash.crosscorr( digest1, digest2 ), )
+```
 
 Todo
 ----
